@@ -14,4 +14,4 @@ steps:
           terraform init -reconfigure -input=false
 
           echo "=== Terraform Destroy ==="
-          terraform destroy -auto-approve -input=false
+          terraform destroy -auto-approve 
