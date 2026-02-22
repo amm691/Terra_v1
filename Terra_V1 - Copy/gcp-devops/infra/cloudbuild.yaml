@@ -1,0 +1,22 @@
+# Infra CI/CD (approval based)
+steps:
+  -name : hashicorp/terraform
+  dir : infra/terraform
+  args : ["init"]
+
+  -name : hashicorp/terrafomr
+  dir : infra/terraform
+  args : ["fmt" , "-check"]
+
+  -name : hashicorp/terrafomr
+  dir : infra/terraform
+  args : ["validate"]
+
+  -name : hashicorp/terraform
+  dir : infra/terraform
+  args : ["plan"]
+
+  -name : hashicorp/terraform
+  dir : infra/terraform
+  args : ["apply", "-auto-approve"]
+
