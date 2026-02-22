@@ -9,9 +9,7 @@ resource "google_container_cluster" "gke" {
     workload_identity_config {
         workload_pool = "${var.project_id}.svc.id.goog"
     }
- lifecycle {
-    prevent_destroy = false
-  }
+    deletion_protection = false
 }
 
 #resource....................
