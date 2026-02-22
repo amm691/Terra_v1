@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Infra CI/CD (approval based)..
-=======
 # Infra CI/CD (approval based).................
->>>>>>> feature/scale-nodepool
 steps:
   -name : hashicorp/terraform
   dir : infra/terraform
