@@ -1,4 +1,4 @@
-# Infra CI/CD (approval based)
+# Infra CI/CD (approval based)..
 steps:
   -name : hashicorp/terraform
   dir : infra/terraform
