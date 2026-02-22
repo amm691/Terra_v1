@@ -10,7 +10,7 @@ resource "google_container_cluster" "gke" {
         workload_pool = "${var.project_id}.svc.id.goog"
     }
  lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
