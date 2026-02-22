@@ -1,22 +1,37 @@
 # Infra CI/CD (approval based).................
 steps:
-  -name : hashicorp/terraform
-  dir : infra/terraform
-  args : ["init"]
+  - name: hashicorp/terraform:1.6
+    entrypoint: sh
+    dir: Terra_V1/gcp-devops/infra/terraform
+    args:
+      - -c
+      - terraform init
 
-  -name : hashicorp/terrafomr
-  dir : infra/terraform
-  args : ["fmt" , "-check"]
+  - name: hashicorp/terraform:1.6
+    entrypoint: sh
+    dir: Terra_V1/gcp-devops/infra/terraform
+    args:
+      - -c
+      - terraform fmt -check
 
-  -name : hashicorp/terrafomr
-  dir : infra/terraform
-  args : ["validate"]
+  - name: hashicorp/terraform:1.6
+    entrypoint: sh
+    dir: Terra_V1/gcp-devops/infra/terraform
+    args:
+      - -c
+      - terraform validate
 
-  -name : hashicorp/terraform
-  dir : infra/terraform
-  args : ["plan"]
+  - name: hashicorp/terraform:1.6
+    entrypoint: sh
+    dir: Terra_V1/gcp-devops/infra/terraform
+    args:
+      - -c
+      - terraform plan
 
-  -name : hashicorp/terraform
-  dir : infra/terraform
-  args : ["apply", "-auto-approve"]
+  - name: hashicorp/terraform:1.6
+    entrypoint: sh
+    dir: Terra_V1/gcp-devops/infra/terraform
+    args:
+      - -c
+      - terraform apply -auto-approve
 
