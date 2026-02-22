@@ -5,35 +5,35 @@ options:
 steps:
   - name: hashicorp/terraform:1.6
     entrypoint: sh
-    dir: gcp-devops/infra/terraform
+    dir: gcp-devops/infra
     args:
       - -c
       - terraform init
 
   - name: hashicorp/terraform:1.6
     entrypoint: sh
-    dir: gcp-devops/infra/terraform
+    dir: gcp-devops/infra
     args:
       - -c
       - terraform fmt -check
 
   - name: hashicorp/terraform:1.6
     entrypoint: sh
-    dir: gcp-devops/infra/terraform
+    dir: gcp-devops/infra
     args:
       - -c
       - terraform validate
 
   - name: hashicorp/terraform:1.6
     entrypoint: sh
-    dir: gcp-devops/infra/terraform
+    dir: gcp-devops/infra
     args:
       - -c
       - terraform plan
 
   - name: hashicorp/terraform:1.6
     entrypoint: sh
-    dir: gcp-devops/infra/terraform
+    dir: gcp-devops/infra
     args:
       - -c
       - terraform apply -auto-approve
