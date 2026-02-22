@@ -1,7 +1,7 @@
+#backend...................
 terraform {
-    backend "gcp" {
-        bucket = "terraform_state_prod"
+    backend "gcs" {
+        bucket = "terraform_state_prod_v1"
         prefix = "gke/infra"
-    }
-    
+    }   
 }
