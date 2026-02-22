@@ -1,7 +1,7 @@
 #main.................
 resource "google_container_cluster" "gke" {
     name = "prod-gke"
-    location = var_region
+    location = var.region
 
     remove_default_node_pool = true
     initial_node_count = 1
