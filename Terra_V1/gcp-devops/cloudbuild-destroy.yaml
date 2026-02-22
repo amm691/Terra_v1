@@ -9,5 +9,9 @@ steps:
     args:
       - -c
       - |
+          set -e
+          echo "=== Terraform Init ==="
           terraform init -reconfigure -input=false
-          terraform destroy -auto-approve
+
+          echo "=== Terraform Destroy ==="
+          terraform destroy -auto-approve -input=false
