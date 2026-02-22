@@ -1,4 +1,3 @@
-#main.................
 resource "google_container_cluster" "gke" {
     name = "prod-gke"
     location = var_region
@@ -11,7 +10,6 @@ resource "google_container_cluster" "gke" {
     }
 }
 
-#resource....................
 resource "google_container_node_pool" "nodes" {
     name = "primary-pool" 
     cluster = google_container_cluster.gke.name
